@@ -11,7 +11,9 @@ def qr_code():
     try:
         json_data = request.get_json()
         if "data" in json_data:
+            
             data = json_data["data"]
+            
             name = data["name"]
             employee_id = data["employee_id"]
             return jsonify({"name": name})
